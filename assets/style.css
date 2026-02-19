@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.decoration {
+    color: red;
+}
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.header {
+    background-color: lightblue;
+}
+
+.sidebar {
+    min-width: 300px;
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+.content {
+    width: 100%;
+    background-color: lightpink;
+    padding: 10px;
+}
