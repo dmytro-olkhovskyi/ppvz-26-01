@@ -26,7 +26,7 @@
                 <h4>Content</h4>
 
                 <?php
-                    $task = isset($_GET['task']) ? filter_var($_GET['task'], FILTER_SANITIZE_NUMBER_INT) : 1;
+                    $task = isset($_REQUEST['task']) ? filter_var($_REQUEST['task'], FILTER_SANITIZE_STRING) : 1;
 
                     // echo $task . '<br>';
 
@@ -35,6 +35,10 @@
                         case 2:
                         case 3:
                             include "./parts/content-{$task}.php";
+                            break;
+                        case "poll":
+                        case "poll-results":
+                            include "./parts/{$task}.php";
                             break;
                         default:
                             include './parts/content-notfound.php';
