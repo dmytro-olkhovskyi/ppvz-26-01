@@ -11,7 +11,7 @@
         foreach($q_value['answers'] as $a_key => $a_value): ?>
             <label>
                 <input type="radio" name="answers[<?= $q_key ?>]" value="<?= $a_key ?>">
-                <?= $a_value['answer'] ?>
+                <?= htmlspecialchars($a_value['answer']) ?>
             </label>
         <?php
         endforeach;

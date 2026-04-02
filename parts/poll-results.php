@@ -39,7 +39,34 @@
         echo '<p>Empty data!</p>';
     }
 
+?>
+
+<hr>
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Correct</th>
+            <th>Total</th>
+            <th>DateTime</th>
+        </tr>
+    </thead>
+
+    <tbody> 
+<?php
 
     // Print all results (table)
-    //
+    $sql_r = "SELECT * FROM results";
+    $res_r = $db->query($sql_r);
+
+    while ($row_r = $res_r->fetch_assoc()) {
+        echo '<tr>' . 
+             '<td>' . $row_r['id'] . '</td>' .
+             '<td>' . $row_r['correct'] . '</td>' .
+             '<td>' . $row_r['total'] . '</td>' .
+             '<td>' . $row_r['datetime'] . '</td>' .
+             '</tr>';
+    }
 ?>
+    </tbody>
+</table>
