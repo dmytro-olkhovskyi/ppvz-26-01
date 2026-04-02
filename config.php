@@ -9,7 +9,7 @@ $db_port = 3306;
 $db = new mysqli($db_host, $db_user, $db_pass, $db_name, $db_port);
 
 if ($db->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $db->connect_error);
 }
 
 $db->set_charset('utf8mb4');
