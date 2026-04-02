@@ -6,7 +6,7 @@
     <?php
 
     foreach($questions as $q_key => $q_value) {
-        echo '<p>' . $q_value['question'] . '</p>';
+        echo '<p>' . htmlspecialchars($q_value['question']) . '</p>';
 
         foreach($q_value['answers'] as $a_key => $a_value): ?>
             <label>
